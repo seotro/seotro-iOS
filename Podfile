@@ -18,4 +18,5 @@ target 'Seotro' do
   pod 'MaterialComponents/Buttons+Theming', '~> 85.2.0'
   pod 'SwiftGifOrigin', '~> 1.7.0'  
   pod 'Toast-Swift', '~> 5.0.0'
+  pod 'Firebase/Analytics'
 end
