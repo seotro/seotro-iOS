@@ -36,6 +36,7 @@ class GuDetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoreCell", for: indexPath) as! StoreCollectionViewCell
+        
         let store = storeList[indexPath.row]
         
         if(indexPath.row == 0){
