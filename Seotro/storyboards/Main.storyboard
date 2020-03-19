@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fNH-NM-yqY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="oaC-rf-xkO">
+            <objects>
+                <viewController storyboardIdentifier="Main" id="fNH-NM-yqY" customClass="MainVC" customModule="Seotro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nra-0B-uWq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서트로" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AT4-CA-ftR">
+                                <rect key="frame" x="184.5" y="161" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="지역을 선택해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bq5-PO-N1x">
+                                <rect key="frame" x="136.5" y="643" width="141" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="63Z-tk-m0r">
+                                <rect key="frame" x="28" y="233" width="378" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="378" id="Ebj-ER-uMQ"/>
+                                    <constraint firstAttribute="height" constant="260" id="jdJ-PK-D27"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWc-Wf-WiS">
+                                <rect key="frame" x="181" y="710" width="52" height="30"/>
+                                <state key="normal" title="시작하기"/>
+                                <connections>
+                                    <action selector="selectBtnAction:" destination="fNH-NM-yqY" eventType="touchUpInside" id="P5c-Lh-Yjc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AWc-Wf-WiS" firstAttribute="top" secondItem="bq5-PO-N1x" secondAttribute="bottom" constant="33" id="5et-cy-WhO"/>
+                            <constraint firstItem="AT4-CA-ftR" firstAttribute="top" secondItem="qBE-2O-Z15" secondAttribute="top" constant="117" id="9VJ-LH-WDZ"/>
+                            <constraint firstItem="bq5-PO-N1x" firstAttribute="top" secondItem="63Z-tk-m0r" secondAttribute="bottom" constant="150" id="Aie-dH-GXy"/>
+                            <constraint firstItem="AWc-Wf-WiS" firstAttribute="centerX" secondItem="bq5-PO-N1x" secondAttribute="centerX" id="Or4-pQ-qb9"/>
+                            <constraint firstItem="63Z-tk-m0r" firstAttribute="top" secondItem="AT4-CA-ftR" secondAttribute="bottom" constant="51" id="aZr-PS-MBp"/>
+                            <constraint firstItem="AT4-CA-ftR" firstAttribute="centerX" secondItem="qBE-2O-Z15" secondAttribute="centerX" id="an6-lN-4La"/>
+                            <constraint firstItem="63Z-tk-m0r" firstAttribute="centerX" secondItem="AT4-CA-ftR" secondAttribute="centerX" id="epc-Cf-zRv"/>
+                            <constraint firstItem="bq5-PO-N1x" firstAttribute="centerX" secondItem="63Z-tk-m0r" secondAttribute="centerX" id="j1A-My-mLf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qBE-2O-Z15"/>
+                    </view>
+                    <connections>
+                        <outlet property="guPickerTF" destination="bq5-PO-N1x" id="RX3-ng-u1w"/>
+                        <outlet property="mapImg" destination="63Z-tk-m0r" id="vR1-dS-2fH"/>
+                        <outlet property="selectBtn" destination="AWc-Wf-WiS" id="Xqd-b9-N2m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJy-33-eSJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79.710144927536234" y="113.16964285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="map" width="1273" height="851"/>
+    </resources>
+</document>

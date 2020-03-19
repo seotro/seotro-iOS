@@ -50,9 +50,9 @@
 		<string>NotoSerifCJKkr-Regular.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
-	<string>GuDetail</string>
+	<string>Main</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Signin</string>
+	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
