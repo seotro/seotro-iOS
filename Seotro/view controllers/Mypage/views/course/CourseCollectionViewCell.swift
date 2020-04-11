@@ -18,6 +18,11 @@ class CourseCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        title.sizeToFit()
+        detail.sizeToFit()
+        startPlace.sizeToFit()
+        endPlace.sizeToFit()
+        print("cell loaded");
     }
 
 }

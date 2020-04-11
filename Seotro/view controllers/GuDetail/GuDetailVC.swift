@@ -39,12 +39,12 @@ class GuDetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         
         let store = storeList[indexPath.row]
         
-        if(indexPath.row == 0){
-            cell.storeImage.backgroundColor = .lightGray
-        }
-        cell.storeImage.image = store.storeImage
-        cell.storeName.text = store.storeName
-        cell.storeDescription.text = store.storeDescription
+//        if(indexPath.row == 0){
+//            cell.storeImage.backgroundColor = .lightGray
+//        }
+//        cell.storeImage.image = store.storeImage
+//        cell.storeName.text = store.storeName
+//        cell.storeDescription.text = store.storeDescription
         
         return cell
     }// 프로토콜 준수
