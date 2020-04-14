@@ -8,27 +8,37 @@
 
 import UIKit
 
-class StoreDetailVC: UIViewController {
+class StoreDetailVC: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var detailData: Store? {
-      didSet {
-        configureView()
-      }
-    }
-    
-    @IBOutlet weak var storeImage: UIImageView!
-    @IBOutlet weak var storeName: UILabel!
-    
+    @IBOutlet weak var StoreDetailCollectionView: UICollectionView!
+    var store: Store?// 처음엔 없으니까 옵셔널 타입으로 설정
+     
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView()
+        StoreDetailCollectionView.dataSource = self
+        StoreDetailCollectionView.delegate = self
     }
     
-    func configureView(){
-        storeImage.image = detailData?.storeImage
-        storeName.text = detailData?.storeName
-        
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        if store != nil{
+            return store!.storeImageList.count
+        }else{
+            return 0
+        }
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoreDetailCell", for: indexPath) as! StoreDetailStoreImageCollectionViewCell
+        for image in store!.storeImageList{
+            
+            cell.storeImage.image = image
+            cell.storeName.text = store!.storeName
+        }
+        return cell
+    }
+    
+    
+    
 }
 

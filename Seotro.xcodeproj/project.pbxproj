@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240AEC87243710FE00DEFA9E /* StorePickTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240AEC85243710FE00DEFA9E /* StorePickTableViewCell.swift */; };
+		240AEC88243710FE00DEFA9E /* StorePickTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 240AEC86243710FE00DEFA9E /* StorePickTableViewCell.xib */; };
+		240AEC8A24371A8000DEFA9E /* CourseMakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240AEC8924371A8000DEFA9E /* CourseMakeVC.swift */; };
+		241897102423B36D003F805E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2418970F2423B36D003F805E /* WebKit.framework */; };
 		24256B85241FA7F000AA5F73 /* StoreDetailStoreImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24256B84241FA7F000AA5F73 /* StoreDetailStoreImageCollectionViewCell.swift */; };
+		246134CD2440E7C200CE9CC6 /* PickedStoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246134CB2440E7C200CE9CC6 /* PickedStoreCollectionViewCell.swift */; };
+		246134CE2440E7C200CE9CC6 /* PickedStoreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246134CC2440E7C200CE9CC6 /* PickedStoreCollectionViewCell.xib */; };
+		2477920B2431C77F00257A1C /* CourseMaking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2477920A2431C77E00257A1C /* CourseMaking.storyboard */; };
 		24D6A4DA241F4AB9007279CD /* GuDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6A4D9241F4AB9007279CD /* GuDetailVC.swift */; };
 		24D6A4DE241F4B4B007279CD /* SearchStore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D6A4DD241F4B4A007279CD /* SearchStore.storyboard */; };
 		24D6A4E3241F4B95007279CD /* SearchStoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6A4E2241F4B95007279CD /* SearchStoreVC.swift */; };
 		24D6A4E5241F4B9E007279CD /* StoreDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6A4E4241F4B9E007279CD /* StoreDetailVC.swift */; };
 		24D6A4E7241F4BA7007279CD /* SearchBarStoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6A4E6241F4BA7007279CD /* SearchBarStoreTableViewCell.swift */; };
 		24D6EB75242124AD008B0AAC /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6EB74242124AD008B0AAC /* Store.swift */; };
-		24D6EB7724212A58008B0AAC /* GuDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D6EB7624212A58008B0AAC /* GuDetail.storyboard */; };
+		24D6EB7A24225075008B0AAC /* GuDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D6EB7924225075008B0AAC /* GuDetail.storyboard */; };
+		24D6EB7C2422531B008B0AAC /* GuDetailStoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D6EB7B2422531B008B0AAC /* GuDetailStoreCollectionViewCell.swift */; };
 		4A01599223291738000EEF1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A01599123291738000EEF1C /* AppDelegate.swift */; };
 		4A0159992329173A000EEF1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A0159982329173A000EEF1C /* Assets.xcassets */; };
 		4A01599C2329173A000EEF1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A01599A2329173A000EEF1C /* LaunchScreen.storyboard */; };
@@ -35,15 +43,22 @@
 
 /* Begin PBXFileReference section */
 		07B535A6F7FCB26788253CAD /* Pods-Seotro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seotro.debug.xcconfig"; path = "Target Support Files/Pods-Seotro/Pods-Seotro.debug.xcconfig"; sourceTree = "<group>"; };
+		240AEC85243710FE00DEFA9E /* StorePickTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePickTableViewCell.swift; sourceTree = "<group>"; };
+		240AEC86243710FE00DEFA9E /* StorePickTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StorePickTableViewCell.xib; sourceTree = "<group>"; };
+		240AEC8924371A8000DEFA9E /* CourseMakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseMakeVC.swift; sourceTree = "<group>"; };
+		2418970F2423B36D003F805E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		24256B84241FA7F000AA5F73 /* StoreDetailStoreImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailStoreImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		246134CB2440E7C200CE9CC6 /* PickedStoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickedStoreCollectionViewCell.swift; sourceTree = "<group>"; };
+		246134CC2440E7C200CE9CC6 /* PickedStoreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickedStoreCollectionViewCell.xib; sourceTree = "<group>"; };
+		2477920A2431C77E00257A1C /* CourseMaking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CourseMaking.storyboard; sourceTree = "<group>"; };
 		24D6A4D9241F4AB9007279CD /* GuDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuDetailVC.swift; sourceTree = "<group>"; };
 		24D6A4DD241F4B4A007279CD /* SearchStore.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SearchStore.storyboard; sourceTree = "<group>"; };
 		24D6A4E2241F4B95007279CD /* SearchStoreVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchStoreVC.swift; sourceTree = "<group>"; };
 		24D6A4E4241F4B9E007279CD /* StoreDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDetailVC.swift; sourceTree = "<group>"; };
 		24D6A4E6241F4BA7007279CD /* SearchBarStoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarStoreTableViewCell.swift; sourceTree = "<group>"; };
-		24D6A4E8241F8E59007279CD /* StoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewCell.swift; sourceTree = "<group>"; };
 		24D6EB74242124AD008B0AAC /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		24D6EB7624212A58008B0AAC /* GuDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GuDetail.storyboard; sourceTree = "<group>"; };
+		24D6EB7924225075008B0AAC /* GuDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GuDetail.storyboard; sourceTree = "<group>"; };
+		24D6EB7B2422531B008B0AAC /* GuDetailStoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuDetailStoreCollectionViewCell.swift; sourceTree = "<group>"; };
 		4A01598E23291738000EEF1C /* Seotro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seotro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A01599123291738000EEF1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A0159982329173A000EEF1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				241897102423B36D003F805E /* WebKit.framework in Frameworks */,
 				8B2D5AD80FBE438D4ACB1051 /* Pods_Seotro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,9 +96,30 @@
 		02FF891C1E7967F47351E787 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2418970F2423B36D003F805E /* WebKit.framework */,
 				72BF0764BF83B31D2BEAC2BF /* Pods_Seotro.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		240AEC8324370E1B00DEFA9E /* CourseMake */ = {
+			isa = PBXGroup;
+			children = (
+				240AEC8424370E3100DEFA9E /* views */,
+				240AEC8924371A8000DEFA9E /* CourseMakeVC.swift */,
+			);
+			path = CourseMake;
+			sourceTree = "<group>";
+		};
+		240AEC8424370E3100DEFA9E /* views */ = {
+			isa = PBXGroup;
+			children = (
+				240AEC85243710FE00DEFA9E /* StorePickTableViewCell.swift */,
+				240AEC86243710FE00DEFA9E /* StorePickTableViewCell.xib */,
+				246134CB2440E7C200CE9CC6 /* PickedStoreCollectionViewCell.swift */,
+				246134CC2440E7C200CE9CC6 /* PickedStoreCollectionViewCell.xib */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		24256B82241FA79000AA5F73 /* StoreDetail */ = {
@@ -131,7 +168,7 @@
 		24D6A4D5241F4A7F007279CD /* views */ = {
 			isa = PBXGroup;
 			children = (
-				24D6A4E8241F8E59007279CD /* StoreCollectionViewCell.swift */,
+				24D6EB7B2422531B008B0AAC /* GuDetailStoreCollectionViewCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -189,6 +226,7 @@
 		4A0159A42329186E000EEF1C /* view controllers */ = {
 			isa = PBXGroup;
 			children = (
+				240AEC8324370E1B00DEFA9E /* CourseMake */,
 				24256B82241FA79000AA5F73 /* StoreDetail */,
 				24D6A4D1241F4956007279CD /* GuDetail */,
 				24D6A4CB241F47DB007279CD /* SearchStore */,
@@ -215,9 +253,10 @@
 		4A0159A92329186E000EEF1C /* storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				24D6EB7924225075008B0AAC /* GuDetail.storyboard */,
 				24D6A4DD241F4B4A007279CD /* SearchStore.storyboard */,
 				4A01599A2329173A000EEF1C /* LaunchScreen.storyboard */,
-				24D6EB7624212A58008B0AAC /* GuDetail.storyboard */,
+				2477920A2431C77E00257A1C /* CourseMaking.storyboard */,
 			);
 			path = storyboards;
 			sourceTree = "<group>";
@@ -330,10 +369,13 @@
 				4A0159DC23291B91000EEF1C /* NanumSquareB.ttf in Resources */,
 				4A0159D823291900000EEF1C /* a장미다방.ttf in Resources */,
 				4A01599C2329173A000EEF1C /* LaunchScreen.storyboard in Resources */,
-				24D6EB7724212A58008B0AAC /* GuDetail.storyboard in Resources */,
+				24D6EB7A24225075008B0AAC /* GuDetail.storyboard in Resources */,
 				24D6A4DE241F4B4B007279CD /* SearchStore.storyboard in Resources */,
+				246134CE2440E7C200CE9CC6 /* PickedStoreCollectionViewCell.xib in Resources */,
 				4A0159992329173A000EEF1C /* Assets.xcassets in Resources */,
 				4A0159D0232918AD000EEF1C /* NanumSquareR.ttf in Resources */,
+				2477920B2431C77F00257A1C /* CourseMaking.storyboard in Resources */,
+				240AEC88243710FE00DEFA9E /* StorePickTableViewCell.xib in Resources */,
 				4A0159DD23291B91000EEF1C /* NanumSquareL.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,10 +434,14 @@
 				4A0159D4232918AD000EEF1C /* UINavigationbar_Extension.swift in Sources */,
 				24D6A4E7241F4BA7007279CD /* SearchBarStoreTableViewCell.swift in Sources */,
 				4A0159D1232918AD000EEF1C /* CustomView.swift in Sources */,
+				246134CD2440E7C200CE9CC6 /* PickedStoreCollectionViewCell.swift in Sources */,
+				240AEC8A24371A8000DEFA9E /* CourseMakeVC.swift in Sources */,
 				4A0159D6232918AD000EEF1C /* UIViewController_Extension.swift in Sources */,
 				24D6A4E3241F4B95007279CD /* SearchStoreVC.swift in Sources */,
+				240AEC87243710FE00DEFA9E /* StorePickTableViewCell.swift in Sources */,
 				24D6EB75242124AD008B0AAC /* Store.swift in Sources */,
 				24D6A4E5241F4B9E007279CD /* StoreDetailVC.swift in Sources */,
+				24D6EB7C2422531B008B0AAC /* GuDetailStoreCollectionViewCell.swift in Sources */,
 				24D6A4DA241F4AB9007279CD /* GuDetailVC.swift in Sources */,
 				4A0159D2232918AD000EEF1C /* CustomButton.swift in Sources */,
 				4A01599223291738000EEF1C /* AppDelegate.swift in Sources */,
@@ -539,6 +585,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U49AK38MC9;
 				INFOPLIST_FILE = "$(SRCROOT)/Seotro/supporting files/Info.plist";
@@ -548,6 +595,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-016112128-dongguk.edu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -561,6 +609,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U49AK38MC9;
 				INFOPLIST_FILE = "$(SRCROOT)/Seotro/supporting files/Info.plist";
@@ -570,6 +619,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-016112128-dongguk.edu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

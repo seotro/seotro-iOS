@@ -10,13 +10,18 @@ import Foundation
 import UIKit
 
 struct Store{
-    var storeImage: UIImage?
     var storeName: String
     var storeDescription: String
+    var storeImageList :[UIImage]
+    var isPicked: Bool
     
-    init(image: String, name:String, description: String){
-        self.storeImage = UIImage(named: image)
+    init(imageList:[String], name:String, description: String){
+        self.storeImageList = [UIImage]()
+        for image in imageList{
+            self.storeImageList.append(UIImage(named: image)!)
+        }
         self.storeName = name
         self.storeDescription = description
+        self.isPicked = false
     }
 }

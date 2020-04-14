@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ryf-cc-QJU">
+            <objects>
+                <navigationController id="MhM-o2-kAe" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L2w-M5-sGb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9BS-gS-LXy" kind="show" id="Ted-EX-Z6y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rwe-jg-JNa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3609" y="-1546"/>
+        </scene>
+        <!--Course MakeVC-->
+        <scene sceneID="GyE-SZ-gLg">
+            <objects>
+                <viewController storyboardIdentifier="courseMakeVC" id="9BS-gS-LXy" customClass="CourseMakeVC" customModule="Seotro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nID-ws-oGi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" id="cdQ-BZ-2ad">
+                                <rect key="frame" x="0.0" y="759" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="1BH-a1-iNM"/>
+                                    <tabBarItem systemItem="more" id="HkS-GB-3r4"/>
+                                </items>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Gs-33-jQZ">
+                                <rect key="frame" x="0.0" y="238" width="414" height="528"/>
+                                <color key="backgroundColor" name="gray"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StorePickTableViewCell" rowHeight="253" id="fdl-J7-Uug" customClass="StorePickTableViewCell" customModule="Seotro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="253"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fdl-J7-Uug" id="WS8-ac-tgN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="253"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="yhE-OT-Wo5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i9-be-vFP">
+                                <rect key="frame" x="0.0" y="709" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1IU-N2-ogq"/>
+                                </constraints>
+                                <state key="normal" title="선택완료">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xM4-FN-Lan">
+                                <rect key="frame" x="0.0" y="56" width="414" height="138"/>
+                                <color key="backgroundColor" name="bg"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="0U0-4w-ulu"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="W66-cB-0ad">
+                                    <size key="itemSize" width="167" height="132"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pickedCell" id="9vU-m7-rhU" customClass="PickedStoreCollectionViewCell" customModule="Seotro" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="132"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="woG-2W-vou">
+                                            <rect key="frame" x="0.0" y="0.0" width="167" height="132"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="167" height="132"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5Gs-33-jQZ" firstAttribute="top" secondItem="xM4-FN-Lan" secondAttribute="bottom" id="0TF-M0-pA2"/>
+                            <constraint firstItem="xM4-FN-Lan" firstAttribute="leading" secondItem="icy-VO-S36" secondAttribute="leading" id="2Wj-bI-h2q"/>
+                            <constraint firstItem="cdQ-BZ-2ad" firstAttribute="top" secondItem="2i9-be-vFP" secondAttribute="bottom" id="3Uf-wH-q07"/>
+                            <constraint firstItem="2i9-be-vFP" firstAttribute="leading" secondItem="icy-VO-S36" secondAttribute="leading" id="Cfs-Tb-3g0"/>
+                            <constraint firstItem="2i9-be-vFP" firstAttribute="trailing" secondItem="icy-VO-S36" secondAttribute="trailing" id="Pa5-Eb-zXA"/>
+                            <constraint firstItem="5Gs-33-jQZ" firstAttribute="leading" secondItem="icy-VO-S36" secondAttribute="leading" id="Rla-v9-yi9"/>
+                            <constraint firstItem="xM4-FN-Lan" firstAttribute="top" secondItem="yhE-OT-Wo5" secondAttribute="bottom" symbolic="YES" id="a4r-qF-wzg"/>
+                            <constraint firstItem="yhE-OT-Wo5" firstAttribute="top" secondItem="icy-VO-S36" secondAttribute="top" id="ch4-E7-pOZ"/>
+                            <constraint firstItem="cdQ-BZ-2ad" firstAttribute="top" secondItem="5Gs-33-jQZ" secondAttribute="bottom" symbolic="YES" id="eC1-YY-2kL"/>
+                            <constraint firstItem="yhE-OT-Wo5" firstAttribute="trailing" secondItem="xM4-FN-Lan" secondAttribute="trailing" id="hTS-hT-RhW"/>
+                            <constraint firstItem="yhE-OT-Wo5" firstAttribute="leading" secondItem="xM4-FN-Lan" secondAttribute="leading" id="hvN-IQ-Z9y"/>
+                            <constraint firstItem="5Gs-33-jQZ" firstAttribute="trailing" secondItem="icy-VO-S36" secondAttribute="trailing" id="sIt-UF-63b"/>
+                            <constraint firstItem="xM4-FN-Lan" firstAttribute="trailing" secondItem="icy-VO-S36" secondAttribute="trailing" id="w74-CF-yDh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="icy-VO-S36"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yD3-Aa-Gbg"/>
+                    <connections>
+                        <outlet property="pickedStoreCollectionView" destination="xM4-FN-Lan" id="rA2-Hs-JMO"/>
+                        <outlet property="storePickTableView" destination="5Gs-33-jQZ" id="kC9-nJ-b4Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIK-0W-UDm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2910.144927536232" y="-1544.1964285714284"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="bg">
+            <color red="0.9570000171661377" green="0.90600001811981201" blue="0.81599998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray">
+            <color red="0.37999999523162842" green="0.37999999523162842" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

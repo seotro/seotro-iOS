@@ -12,7 +12,7 @@ class StoreDetailStoreImageCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var storeImage: UIImageView!
     @IBOutlet weak var storeName: UILabel!
-    
+    //셀에 아울렛 연결하는게 맞다.
     override func awakeFromNib() {
         super.awakeFromNib()
     }

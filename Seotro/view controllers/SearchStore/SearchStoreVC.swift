@@ -21,6 +21,8 @@ class SearchStoreVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
         setStoreData()
         
         searchController.searchResultsUpdater = self
@@ -38,25 +40,33 @@ class SearchStoreVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "ShowDetailSegue"{
-            (segue.destination as! StoreDetailVC).detailData =
-                storeList[tableView.indexPathForSelectedRow!.row]
+        let indexPath = tableView.indexPathForSelectedRow
+        let vc = segue.destination as? StoreDetailVC
+        var store : Store
+        if isFiltering{
+            store = filteredStore[indexPath!.row]
+            print("필터링")
+        }else{
+            store = storeList[indexPath!.row]
+            print("필터링안함")
         }
-        
-        
+        vc?.store = store
     }
+    
+    
+
     var isSearchBarEmpty: Bool{
         return searchController.searchBar.text?.isEmpty ?? true
     }
     
     func setStoreData(){
-        let store1 = Store(image: "독수리다방", name: "독수리다방", description: "신촌")
-        let store2 = Store(image: "독수리다방", name: "독수리다방", description: "신촌")
-        let store3 = Store(image: "미도파꽃집", name: "미도파꽃집", description: "장미")
-        let store4 = Store(image: "미림분식", name: "미림분식", description: "떡볶이")
-        let store5 = Store(image: "학림다방", name: "학림다방", description: "비엔나 커피")
-        let store6 = Store(image: "학림다방", name: "학림다방", description: "비엔나 커피")
+        
+        let store1 = Store(imageList: ["독수리다방"], name: "독수리다방", description: "신촌")
+        let store2 = Store(imageList: ["독수리다방"], name: "독수리다방", description: "신촌")
+        let store3 = Store(imageList: ["미도파꽃집"], name: "미도파꽃집", description: "장미")
+        let store4 = Store(imageList: ["미림분식"], name: "미림분식", description: "떡볶이")
+        let store5 = Store(imageList: ["학림다방"], name: "학림다방", description: "비엔나 커피")
+        let store6 = Store(imageList: ["학림다방"], name: "학림다방", description: "비엔나 커피")
         
         storeList = [store1, store2, store3, store4, store5, store6]
     }
@@ -85,7 +95,7 @@ extension SearchStoreVC: UITableViewDataSource, UITableViewDelegate{
         }
        
         
-        cell.storeImage.image = store.storeImage
+        cell.storeImage.image = store.storeImageList[0]
         cell.storeName.text = store.storeName
         cell.storeDescription.text = store.storeDescription
         
