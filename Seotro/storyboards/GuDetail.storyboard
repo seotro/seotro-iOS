@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,7 +30,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="StoreCell" reuseIdentifier="StoreCell" id="c7q-IT-786" customClass="StoreCollectionViewCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoreCell" id="c7q-IT-786" customClass="GuDetailStoreCollectionViewCell" customModule="Seotro" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="19" width="100" height="162"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -73,9 +74,9 @@
                                         </constraints>
                                         <size key="customSize" width="100" height="162"/>
                                         <connections>
-                                            <outlet property="storeDescription" destination="JFV-Ej-AjH" id="vr6-7R-cGS"/>
-                                            <outlet property="storeImage" destination="VGw-Ig-IF7" id="UVi-yA-dhn"/>
-                                            <outlet property="storeName" destination="sj9-Bf-GYi" id="lZ4-UC-LPe"/>
+                                            <outlet property="storeDescription" destination="JFV-Ej-AjH" id="fu3-Cv-ZEg"/>
+                                            <outlet property="storeImage" destination="VGw-Ig-IF7" id="vHy-oV-JeT"/>
+                                            <outlet property="storeName" destination="sj9-Bf-GYi" id="0p1-iP-6iN"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -87,20 +88,48 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHx-PW-a3n">
+                                <rect key="frame" x="0.0" y="126" width="203" height="80"/>
+                                <color key="backgroundColor" name="bg"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="J0Z-UL-KHQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="추천 코스"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdD-eh-ZU0">
+                                <rect key="frame" x="211" y="126" width="203" height="80"/>
+                                <color key="backgroundColor" name="bg"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="GG3-f7-ZJ3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="코스 짜기"/>
+                                <connections>
+                                    <action selector="courseMake:" destination="5UR-y4-8tr" eventType="touchUpInside" id="IvU-qX-0OG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="FHx-PW-a3n" firstAttribute="leading" secondItem="lrM-E0-pkh" secondAttribute="leading" id="9zB-U4-LRC"/>
+                            <constraint firstItem="FHx-PW-a3n" firstAttribute="top" secondItem="H1I-gj-Kxb" secondAttribute="bottom" constant="35" id="GJW-pA-Xdk"/>
                             <constraint firstItem="MJM-0c-k7b" firstAttribute="centerY" secondItem="XVX-Un-Jvn" secondAttribute="centerY" multiplier="0.75" id="KFg-dI-dhi"/>
                             <constraint firstItem="lrM-E0-pkh" firstAttribute="trailing" secondItem="H1I-gj-Kxb" secondAttribute="trailing" id="OAD-b7-yk3"/>
+                            <constraint firstItem="ZdD-eh-ZU0" firstAttribute="top" secondItem="H1I-gj-Kxb" secondAttribute="bottom" constant="35" id="RHh-g2-1Q2"/>
                             <constraint firstItem="MJM-0c-k7b" firstAttribute="leading" secondItem="lrM-E0-pkh" secondAttribute="leading" id="Y3C-d6-AEa"/>
                             <constraint firstItem="MJM-0c-k7b" firstAttribute="trailing" secondItem="lrM-E0-pkh" secondAttribute="trailing" id="Zmn-Rp-nsM"/>
+                            <constraint firstItem="lrM-E0-pkh" firstAttribute="trailing" secondItem="ZdD-eh-ZU0" secondAttribute="trailing" id="dKQ-VB-FSx"/>
                             <constraint firstItem="MJM-0c-k7b" firstAttribute="centerX" secondItem="XVX-Un-Jvn" secondAttribute="centerX" id="hjz-x9-HSY"/>
                             <constraint firstItem="H1I-gj-Kxb" firstAttribute="top" secondItem="lrM-E0-pkh" secondAttribute="top" constant="10" id="lSp-qw-TJu"/>
+                            <constraint firstItem="ZdD-eh-ZU0" firstAttribute="width" secondItem="FHx-PW-a3n" secondAttribute="width" id="pzf-Tw-VBk"/>
                             <constraint firstItem="H1I-gj-Kxb" firstAttribute="leading" secondItem="lrM-E0-pkh" secondAttribute="leading" id="uat-dQ-LP6"/>
+                            <constraint firstItem="ZdD-eh-ZU0" firstAttribute="leading" secondItem="FHx-PW-a3n" secondAttribute="trailing" constant="8" symbolic="YES" id="vHs-0O-EP7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lrM-E0-pkh"/>
                     </view>
                     <connections>
+                        <outlet property="courseMakeButton" destination="ZdD-eh-ZU0" id="IKk-iP-vON"/>
                         <outlet property="storeCollection" destination="MJM-0c-k7b" id="bTj-Ek-XPd"/>
                     </connections>
                 </viewController>
@@ -109,4 +138,9 @@
             <point key="canvasLocation" x="-3312" y="-729"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="bg">
+            <color red="0.9570000171661377" green="0.90600001811981201" blue="0.81599998474121094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
