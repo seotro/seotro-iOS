@@ -77,21 +77,21 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="0U0-4w-ulu"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="W66-cB-0ad">
-                                    <size key="itemSize" width="167" height="132"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="W66-cB-0ad">
+                                    <size key="itemSize" width="142" height="134"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pickedCell" id="9vU-m7-rhU" customClass="PickedStoreCollectionViewCell" customModule="Seotro" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="167" height="132"/>
+                                        <rect key="frame" x="0.0" y="4" width="130" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="woG-2W-vou">
-                                            <rect key="frame" x="0.0" y="0.0" width="167" height="132"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="167" height="132"/>
+                                        <size key="customSize" width="130" height="130"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

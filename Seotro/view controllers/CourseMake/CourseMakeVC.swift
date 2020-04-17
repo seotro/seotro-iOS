@@ -16,8 +16,7 @@ class CourseMakeVC: UIViewController{
         didSet{
             pickedStoreCollectionView.delegate = self
             pickedStoreCollectionView.dataSource = self
-            let layout : UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-            layout.scrollDirection = .horizontal
+            
         }
     }
     
@@ -32,8 +31,21 @@ class CourseMakeVC: UIViewController{
         let pickednibName = UINib(nibName: "PickedStoreCollectionViewCell", bundle:nil)
         pickedStoreCollectionView.register(pickednibName, forCellWithReuseIdentifier: "pickedCell")
         
-        
+        setupFlowLayout()
 
+    }
+    
+    private func setupFlowLayout() {
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.sectionInset = UIEdgeInsets.zero //reflect the spacing at the outer edges of the section.
+        flowLayout.minimumInteritemSpacing = 10 //set the spacing between items in the same line
+        flowLayout.minimumLineSpacing = 10 //between lines of items in the grid.
+        flowLayout.scrollDirection = .horizontal
+        
+        let halfWidth = UIScreen.main.bounds.width / 3
+        flowLayout.itemSize = CGSize(width: halfWidth * 0.9 , height: halfWidth * 0.9)
+        pickedStoreCollectionView.collectionViewLayout = flowLayout
+        
     }
     
     
@@ -41,18 +53,22 @@ class CourseMakeVC: UIViewController{
         let index = sender.tag
         let pickedStore = storeList[index]
         let indexToFill = pickedStoreList.count
+        
         pickedStoreCollectionView.performBatchUpdates({
             pickedStoreList.append(pickedStore)
-            print("************************")
-            print(pickedStoreList)
             pickedStoreCollectionView.insertItems(at: [(NSIndexPath(item: indexToFill, section: 0) as IndexPath)])
         }, completion: nil)
-        
     }
     
     @objc func deleteFromCollection(sender:UIButton){
-        
+        let index = sender.tag
+        pickedStoreList.remove(at: index)
+        pickedStoreCollectionView.reloadData()
     }
+    
+    
+    
+    
     
     
     func setStoreData(){
@@ -63,7 +79,6 @@ class CourseMakeVC: UIViewController{
         let store5 = Store(imageList: ["학림다방"], name: "학림다방", description: "비엔나 커피")
         let store6 = Store(imageList: ["학림다방"], name: "학림다방", description: "비엔나 커피")
         storeList = [store1, store2, store3, store4, store5, store6]
-        pickedStoreList = [store1, store6]
     }
     
 }
