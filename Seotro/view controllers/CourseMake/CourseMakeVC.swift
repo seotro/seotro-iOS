@@ -1,9 +1,18 @@
 import UIKit
 
-class CourseMakeVC: UIViewController{
-    
+class CourseMakeVC: UIViewController,UISearchResultsUpdating{
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        filterContentForSearchText(searchBar.text!)
+    }
     var storeList = [Store]()
     var pickedStoreList = [Store]()
+    // 검색기능
+    var filteredStore = [Store]()
+    let searchController = UISearchController(searchResultsController: nil)
+    var isFiltering: Bool{
+        return searchController.isActive && !isSearchBarEmpty
+    }
     
     @IBOutlet weak var storePickTableView: UITableView!{
         didSet{
@@ -19,6 +28,14 @@ class CourseMakeVC: UIViewController{
             
         }
     }
+    @IBAction func CompleteButton(_ sender: Any) {
+        let storyboard = UIStoryboard.init(name: "CourseArranging", bundle: nil)
+        let courseArrangeVC = storyboard.instantiateViewController(withIdentifier: "CourseArrangeVC") as! CourseArrangeVC
+        
+        courseArrangeVC.modalPresentationStyle = .overCurrentContext
+        self.present(courseArrangeVC, animated: false, completion: nil)
+        
+    }// 코스화면으로 넘어가야함
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +43,29 @@ class CourseMakeVC: UIViewController{
         //스토어픽 테이블셀 xib파일 불러오기
         let nibName = UINib(nibName: "StorePickTableViewCell", bundle: nil)
         storePickTableView.register(nibName, forCellReuseIdentifier: "StorePickTableViewCell")
-        _ =  Bundle.main.loadNibNamed("StorePickTableViewCell", owner: nil, options: nil)
-        
+        // pickedStore콜렉션뷰 셀 xib파일 가져오기
         let pickednibName = UINib(nibName: "PickedStoreCollectionViewCell", bundle:nil)
         pickedStoreCollectionView.register(pickednibName, forCellWithReuseIdentifier: "pickedCell")
-        
         setupFlowLayout()
-
+        // 검색기능
+        searchController.searchResultsUpdater = self // search result를 업데이트 하는 개체
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "원하는 가게를 검색해보세요!"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
+    
+    func filterContentForSearchText(_ searchText: String){
+        filteredStore = storeList.filter{(store: Store) -> Bool in
+            return store.storeName.lowercased().contains(searchText.lowercased())
+        }
+        storePickTableView.reloadData()
+    }
+    
+    var isSearchBarEmpty:Bool{
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
     
     private func setupFlowLayout() {
         let flowLayout = UICollectionViewFlowLayout()
@@ -42,8 +74,8 @@ class CourseMakeVC: UIViewController{
         flowLayout.minimumLineSpacing = 10 //between lines of items in the grid.
         flowLayout.scrollDirection = .horizontal
         
-        let halfWidth = UIScreen.main.bounds.width / 3
-        flowLayout.itemSize = CGSize(width: halfWidth * 0.9 , height: halfWidth * 0.9)
+        let halfWidth = UIScreen.main.bounds.width / 5
+        flowLayout.itemSize = CGSize(width: halfWidth * 0.9 , height: halfWidth)
         pickedStoreCollectionView.collectionViewLayout = flowLayout
         
     }
@@ -64,6 +96,7 @@ class CourseMakeVC: UIViewController{
         let index = sender.tag
         pickedStoreList.remove(at: index)
         pickedStoreCollectionView.reloadData()
+        print("index:", index, "\n")
     }
     
     
@@ -85,19 +118,28 @@ class CourseMakeVC: UIViewController{
 
 extension CourseMakeVC: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return storeList.count
+        if isFiltering{
+            return filteredStore.count
+       }else{
+            return storeList.count
+       }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StorePickTableViewCell", for: indexPath) as! StorePickTableViewCell
         
         let store:Store
-        store = storeList[indexPath.row]
+        if isFiltering{
+            store = filteredStore[indexPath.row]
+        }else{
+            store = storeList[indexPath.row]
+        }
         cell.storeName.text = store.storeName
         cell.storeDescription.text = store.storeDescription
         cell.storeImage.image = store.storeImageList[0]
         cell.pickButton.tag = indexPath.row
         cell.pickButton.addTarget(self, action: #selector(addToCollection(sender:)), for: .touchUpInside)
+        
         return cell
     }
 }

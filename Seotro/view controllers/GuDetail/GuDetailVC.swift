@@ -5,21 +5,18 @@ class GuDetailVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     
     @IBOutlet weak var storeCollection: UICollectionView!
     var storeList = [Store]() // Store구조체 리스트
-    
     @IBOutlet weak var courseMakeButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setStoreData()
-        
         storeCollection.dataSource = self
         storeCollection.delegate = self
-        
  
         let layout : UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        
     }
     
     func setStoreData(){
