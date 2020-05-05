@@ -28,6 +28,14 @@ class CourseMakeVC: UIViewController,UISearchResultsUpdating{
             
         }
     }
+    @IBAction func CompleteButton(_ sender: Any) {
+        let storyboard = UIStoryboard.init(name: "CourseArranging", bundle: nil)
+        let courseArrangeVC = storyboard.instantiateViewController(withIdentifier: "CourseArrangeVC") as! CourseArrangeVC
+        
+        courseArrangeVC.modalPresentationStyle = .overCurrentContext
+        self.present(courseArrangeVC, animated: false, completion: nil)
+        
+    }// 코스화면으로 넘어가야함
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +96,7 @@ class CourseMakeVC: UIViewController,UISearchResultsUpdating{
         let index = sender.tag
         pickedStoreList.remove(at: index)
         pickedStoreCollectionView.reloadData()
+        print("index:", index, "\n")
     }
     
     
